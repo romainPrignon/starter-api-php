@@ -1,0 +1,52 @@
+{
+    "name": "romainprignon/apero-peaks",
+    "description": "apero-peaks API",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Romain Prignon",
+            "email": "rprignon@peaks.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^3.3",
+        "symfony/console": "^3.3",
+        "symfony/yaml": "^3.3"
+    },
+    "require-dev": {
+        "symfony/dotenv": "^3.3",
+        "symfony/requirements-checker": "^1.0",
+        "sensiolabs/security-checker": "^4.1",
+        "phpunit/phpunit": "^6.3",
+        "symfony/debug-pack": "^1.0",
+        "brainmaestro/composer-git-hooks": "^2.3",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "make cache-warmup": "script",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "requirements-checker": "script",
+            "security-checker security:check": "script"
+        },
+        "cghooks": "cghooks",
+        "checkstyle": "phpcs --standard=PSR2 src/",
+        "pre-commit": "composer run checkstyle",
+        "post-install-cmd": "cghooks add --ignore-lock",
+        "post-update-cmd": "cghooks update"
+    }
+}

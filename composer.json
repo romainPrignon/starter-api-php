@@ -76,7 +76,7 @@
     "scripts": {
         "test": "phpunit && behat",
         "checkerror": "parallel-lint src/ tests/ && phpmd src/,tests/ text rulesets.xml",
-        "checkstyle": "phpcs --standard=Symfony2 src/",
+        "checkstyle": "phpcs --standard=PSR2 src/",
         "format": "php-cs-fixer fix --level=symfony src/",
         "coverage": "phpmetrics --report-html=coverage/phpmetrics.html src/",
         "debug": "xdebug",
@@ -89,9 +89,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-
-            "./vendor/bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -99,9 +97,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-
-            "./vendor/bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
     "extra": {
