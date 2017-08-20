@@ -1,18 +1,19 @@
 {
-    "name": "romainprignon/apero-peaks",
-    "description": "apero-peaks API",
+    "name": "romainprignon/starter-api-php",
+    "description": "starter project for standard php api",
     "version": "1.0.0",
     "license": "MIT",
     "type": "project",
     "authors": [
         {
             "name": "Romain Prignon",
-            "email": "rprignon@peaks.fr"
+            "email": "pro.rprignon@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "RomainPrignon\\": "src/",
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
@@ -20,8 +21,15 @@
             "": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/romainPrignon/starter-package-php.git"
+        }
+    ],
     "require": {
+        "php": ">=7.1",
+
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.3",
         "symfony/console": "^3.3",
