@@ -1,0 +1,11 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+encode:
+    path: /encode
+    controller: App\Controller\SecretController::encode
+
+decode:
+    path: /decode
+    controller: App\Controller\SecretController::decode
