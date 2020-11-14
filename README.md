@@ -63,6 +63,9 @@ If you don't need it, juste remove the following in composer.json appKernel.php 
 ```
 
 ## Todo
+* [ ] choose qa tools (prestissimo ?, php-parallel-lint ?, phpmd ?,psalm?, php_codesniffer, phpmetrics, php-cs-fixer, phpstan ?, rector ?)
+* [ ] clean readme
+
 * [ ] debugging
 * [ ] debug performance
 * [ ] server-sent-event
